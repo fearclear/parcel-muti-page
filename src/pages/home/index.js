@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { DatePicker } from 'antd'
 import Header from '../../component/header'
 import Footer from '../../component/footer'
 class AppComponent extends React.Component {
@@ -7,7 +8,8 @@ class AppComponent extends React.Component {
     return (
       <div>
         <Header />
-        <h2>main</h2>
+        <DatePicker />
+        <h2>main查看能不能行</h2>
         <Footer />
       </div>
     )
