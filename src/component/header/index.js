@@ -9,18 +9,17 @@ export default class Header extends React.Component {
           <div id="menu">
             <ul>
 
-              <li ><a href='/' className='active'>主页</a></li>
+              <li ><a href='http://bluestoneamc.cn/'>主页</a></li>
 
-              <li id="li1"><a href="/about/">关于蓝石</a></li>
+              <li><a href='http://bluestoneamc.cn/about/'>关于蓝石</a></li>
 
-              <li id="li2"><a href="/product/">产品及业务</a></li>
+              <li><a href='http://bluestoneamc.cn/product/'>产品及业务</a></li>
 
-              <li id="li3"><a href="/news/">蓝石动态</a></li>
+              <li><a href='/' className="active">信息披露</a></li>
 
-              <li id="li4"><a href="/job/">招贤纳士</a></li>
+              <li><a href='http://bluestoneamc.cn/news/'>蓝石动态</a></li>
 
-              <li id="menu_last"><a href="/link">联系我们</a></li>
-
+              <li><a href='http://bluestoneamc.cn/job/'>招贤纳士</a></li>
             </ul>
           </div>
         </div>
