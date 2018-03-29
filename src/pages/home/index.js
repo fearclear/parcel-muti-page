@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import { DatePicker } from 'antd'
+import { LocaleProvider } from 'antd'
+import zhCN from 'antd/lib/locale-provider/zh_CN'
 import Header from '../../component/header'
 import Footer from '../../component/footer'
 class AppComponent extends React.Component {
@@ -8,7 +9,6 @@ class AppComponent extends React.Component {
     return (
       <div>
         <Header />
-        <DatePicker />
         <h2>main查看能不能行</h2>
         <Footer />
       </div>
@@ -16,6 +16,9 @@ class AppComponent extends React.Component {
   }
 }
 ReactDom.render(
-  <AppComponent />,
+  <LocaleProvider locale={zhCN}>
+    <AppComponent />
+  </LocaleProvider>,
+  // <AppComponent />,
   document.getElementById('root')
 )

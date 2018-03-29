@@ -1,0 +1,170 @@
+/* 简化版公共样式 */
+
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+body, input, select, button, textarea {
+	font-size: 16px;
+	font-family: microsoft Yahei, Tahoma, Geneva, sans-serif;
+}
+
+body {
+	margin: 0;
+	font-family: microsoft Yahei;
+}
+
+img {
+	border: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+input, select, textaerea {
+	outline: none;
+}
+
+textarea {
+	resize: none
+}
+
+a {
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.font_color {
+	color: #666;
+}
+
+/*公共样式结束*/
+
+.w1000 {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.w1200 {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#logo {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#menu {
+	height: 80px;
+	float: right;
+	width: 715px;
+	text-align: right;
+}
+
+#menu ul {
+	margin-top: 65px;
+	padding: 0;
+	position: relative;
+	width: 700px;
+}
+
+#menu ul li {
+	float: left;
+	padding: 0 18px;
+}
+
+#menu ul li a {
+	color: #595757;
+	font-family: microsoft Yahei;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+#menu ul li a.active {
+	border-bottom: 1px solid #a7a7a7;
+	padding-bottom: 5px;
+}
+
+
+#menu_last {
+	background: url(../img/menu_link.jpg) no-repeat 0 0;
+	padding-left: 40px !important;
+	margin-left: 15px;
+	padding-right: 0px !important;
+}
+
+#menu_last a {
+	font-size: 14px !important;
+	color: #a2a2a2 !important;
+}
+
+
+
+#footer {
+	clear: both;
+	height: 120px;
+	font-family: microsoft yahei;
+}
+
+#footer a {
+	font-size: 14px;
+}
+
+#f_logo {
+	float: left;
+	width: 300px;
+}
+
+#f_logo img {
+	margin-top: 75px;
+	margin-left: 70px;
+}
+
+#f_right {
+	float: right;
+	width: 571px;
+	margin-top: 60px;
+	margin-right: 329px;
+	box-sizing: border-box;
+}
+
+#f_right p {
+	clear: both;
+	line-height: 50px;
+	padding: 0 0 0 56px;
+	color: #595757;
+}
+
+#f_right ul li {
+	text-align: center;
+	display: inline-block;
+}
+
+#f_right ul li a {
+	color: #595757;
+	margin: 0 10px;
+	display: inline-block;
+	font-family: Microsoft Yahei;
+}
