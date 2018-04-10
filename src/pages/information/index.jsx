@@ -1,37 +1,56 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import { Table, LocaleProvider } from 'antd'
+import { Input, Table, LocaleProvider } from 'antd'
 import zhCN from 'antd/lib/locale-provider/zh_CN'
 import Header from '../../component/header'
 import Footer from '../../component/footer'
 import './index.less'
+
+const Search = Input.Search
 class AppComponent extends React.Component {
   constructor() {
     super()
-    const dataSource = [{
-      key: '1',
-      name: '胡彦斌',
-      age: 32,
-      address: '西湖区湖底公园1号'
-    }, {
-      key: '2',
-      name: '胡彦祖',
-      age: 42,
-      address: '西湖区湖底公园1号'
-    }]
+    let dataSource = (() => {
+      let tempArr = []
+      for(let i = 100; i--;) {
+        tempArr.push({
+          key: i,
+          name: '123',
+          age: 13,
+          address: 'home'
+        })
+      }
+      return tempArr
+    })()
 
     const columns = [{
-      title: '姓名',
+      title: '产品名称',
       dataIndex: 'name',
       key: 'name'
     }, {
-      title: '年龄',
+      title: '产品类型',
       dataIndex: 'age',
-      key: 'age'
+      key: 'type'
     }, {
-      title: '住址',
+      title: '管理人',
+      dataIndex: 'age',
+      key: 'admin'
+    }, {
+      title: '基金经理',
+      dataIndex: 'age',
+      key: 'manager'
+    }, {
+      title: '风险等级',
+      dataIndex: 'age',
+      key: 'rage'
+    }, {
+      title: '运行状态',
+      dataIndex: 'age',
+      key: 'state'
+    }, {
+      title: '发行日期',
       dataIndex: 'address',
-      key: 'address'
+      key: 'date'
     }]
     this.state = {
       dataSource,
@@ -39,26 +58,33 @@ class AppComponent extends React.Component {
     }
   }
   render() {
-    console.log(this.state)
     let {
       dataSource,
-      columns
+      columns,
+      pagination,
+      loading
     } = this.state
     return (
       <div>
         <Header />
-        <div className="banner-information">
-          <div style={{ position: 'relative', zIndex: 10 }}>
-            <h2 className="child-title">信息披露</h2>
-            <h3 className="child-info">Information&nbsp;Disclosure</h3>
-          </div>
-        </div>
         <div className="w1200 disclosure">
-          <Table dataSource={dataSource} columns={columns} />
+          <Search className="common-default-btn" placeholder="关键字" enterButton="搜索" size="large" />
+          <Table
+            className="common-table"
+            dataSource={dataSource}
+            columns={columns}
+            pagination={pagination}
+            loading={loading}
+            onChange={this.handleTableChange}
+            // size="middle"
+          />
         </div>
         <Footer />
       </div>
     )
+  }
+  handleTableChange(index) {
+    console.log(index)
   }
 }
 ReactDom.render(

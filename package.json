@@ -4,10 +4,13 @@
   "description": "lanshi disclosure",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "dev:home": "cross-env NODE_ENV=development&& parcel src/pages/home/index.html",
+    "dev:information": "cross-env NODE_ENV=development&& parcel src/pages/information/index.html",
+    "dev:other": "cross-env NODE_ENV=development&& parcel src/pages/other/index.html",
     "parcel:build": "parcel build",
     "prebuild": "rimraf dist",
     "build": "node build.js",
+    "main": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,16 +20,18 @@
   "author": "fearclear",
   "license": "MIT",
   "dependencies": {
-    "antd": "^3.3.3",
+    "antd": "^3.4.0",
     "jquery": "^3.3.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-import": "^1.6.7",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "copy": "^0.3.1",
+    "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
@@ -36,6 +41,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "sw-register": "^0.4.1"
   }
 }
