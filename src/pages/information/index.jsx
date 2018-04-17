@@ -5,11 +5,19 @@ import zhCN from 'antd/lib/locale-provider/zh_CN'
 import Header from '../../component/header'
 import Footer from '../../component/footer'
 import './index.less'
+import Mock from 'mockjs'
 
 const Search = Input.Search
 class AppComponent extends React.Component {
   constructor() {
     super()
+    let data = Mock.mock([
+      {
+        'id|+1': 1
+      }
+    ]
+    )
+    console.log(data)
     let dataSource = (() => {
       let tempArr = []
       for(let i = 100; i--;) {
