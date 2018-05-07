@@ -1,13 +1,24 @@
 import React from 'react'
+import Sign from '../signIn'
 import '../../css/main.css'
 import './index.less'
 export default class Header extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
   componentDidMount() {
     document.querySelector('.banner-information').style.backgroundImage = 'url(../../img/banner_information.jpg)'
+  }
+  login() {
+    this.refs.signIn.showModal()
   }
   render() {
     return (
       <div id="head">
+        <Sign ref="signIn" />
         <div className="w1200 clearfix">
           {
             process.env.NODE_ENV === 'development'
@@ -30,7 +41,7 @@ export default class Header extends React.Component {
               <li><a href='http://bluestoneamc.cn/job/'>招贤纳士</a></li>
             </ul>
             <p>
-              <a style={{ color: '#a2a2a2' }} onClick={this.click}>登录</a> |
+              <a style={{ color: '#a2a2a2' }} onClick={this.login.bind(this)}>登录</a> |
               <a href="http://bluestoneamc.cn//link" style={{ color: '#a2a2a2' }}> 联系我们</a>
             </p>
           </div>
@@ -43,8 +54,5 @@ export default class Header extends React.Component {
         </div>
       </div>
     )
-  }
-  click() {
-    console.log('click')
   }
 }

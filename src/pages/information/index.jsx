@@ -25,7 +25,6 @@ class AppComponent extends React.Component {
         }
       ]
     })
-    console.log(dataMock)
     let dataSource = dataMock.products
 
     const columns = [{
