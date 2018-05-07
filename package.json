@@ -4,7 +4,7 @@
   "description": "lanshi disclosure",
   "main": "index.js",
   "scripts": {
-    "dev:home": "cross-env NODE_ENV=development&& parcel src/pages/home/index.html",
+    "dev:summary": "cross-env NODE_ENV=development&& parcel src/pages/home/index.html",
     "dev:information": "cross-env NODE_ENV=development&& parcel src/pages/information/index.html",
     "dev:other": "cross-env NODE_ENV=development&& parcel src/pages/other/index.html",
     "parcel:build": "parcel build",
