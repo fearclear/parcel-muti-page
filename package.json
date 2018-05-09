@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev:summary": "cross-env NODE_ENV=development&& parcel src/pages/summary/index.html",
+    "dev:manager": "cross-env NODE_ENV=development&& parcel src/pages/manager/index.html",
+    "dev:notice": "cross-env NODE_ENV=development&& parcel src/pages/notice/index.html",
     "dev:information": "cross-env NODE_ENV=development&& parcel src/pages/information/index.html",
-    "dev:other": "cross-env NODE_ENV=development&& parcel src/pages/other/index.html",
     "parcel:build": "parcel build",
     "prebuild": "rimraf dist",
     "build": "node build.js",
